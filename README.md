@@ -2,6 +2,8 @@
 ## Shinhan Test
 The mid-term competency assessment test of students held by Shinhan and Likieon.
 
+## Live demo
+[demo](https://huynhduytins.github.io/host-test/)
 ## About App
 Weather App using API from [weatherapi.com](https://www.weatherapi.com/) to display weather's information on any location in the world.
 
