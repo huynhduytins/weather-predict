@@ -29,7 +29,7 @@ In the first time using the app, the app will display the weather information on
 
     The background image will be changed according to the day and night
 
-![alt text](https://github.com/huynhduytins/Shinhan-test/blob/main/screenShots/3.PNG?raw=true)
+![alt text](https://github.com/huynhduytins/Shinhan-test/blob/main/screenShots/3.png?raw=true)
 
     Hover the image to see more information
 
