@@ -1,5 +1,6 @@
 let cacheCurrent = {};
 let cacheForecast = {};
+let cacheDegreeChart = {};
 
 const apiKey = "83618b6f674544dfa5431037230802";
 const apiURL = "https://restcountries.com/v2/all";
@@ -79,3 +80,11 @@ const iconDays = document.querySelectorAll(".icon-day");
 const degreeDays = document.querySelectorAll(".degree-day");
 
 const errorLoading = document.querySelector(".error");
+
+// Degree Chart
+const charts = document.querySelectorAll(".chart-fill");
+const degrees = document.querySelectorAll(".chart-bar .degree");
+const locationChart = document.querySelector(".degree-chart .location");
+const imgDegree = document.querySelector(".degree-chart .top img");
+const degreeBtn = document.querySelector(".btn-degree");
+const chartContainer = document.querySelector(".chart-container");

@@ -1,4 +1,5 @@
 const dayOfWeek = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+let dataDegree;
 
 const fetchForecast = async (location) => {
   let res = await fetch(
@@ -8,6 +9,8 @@ const fetchForecast = async (location) => {
   console.log(res);
 
   cacheForecast[location] = res.forecast;
+  dataDegree = res;
+
   resetForecastCard(res.forecast);
 };
 
@@ -68,4 +71,14 @@ daysBtn.forEach((el, index) => {
     currentBtn = index;
     updateForecastCard(el, index);
   });
+});
+
+degreeBtn.addEventListener("click", () => {
+  loading.classList.add("visible");
+  current.classList.add("visible");
+  forecast.classList.add("visible");
+  chartContainer.classList.remove("visible");
+  forecastBtn.textContent = "Current";
+
+  tempStatic(dataDegree);
 });

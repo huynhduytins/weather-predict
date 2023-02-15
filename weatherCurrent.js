@@ -11,11 +11,12 @@ const reUpdate = (res) => {
       reUpdate(res);
     }
     console.log(res);
-    console.log("hi");
   }, (16 - (parseInt(res.location.localtime.split(" ")[1].split(":")[1]) % 15)) * 60 * 1000);
 };
 
 const fetchWeather = async (location) => {
+  forecastBtn.disabled = true;
+  degreeBtn.disabled = true;
   try {
     let res = await fetch(
       `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`
@@ -25,7 +26,10 @@ const fetchWeather = async (location) => {
       setTimeout(() => {
         loading.classList.add("visible");
         errorLoading.classList.add("visible");
+        chartContainer.classList.add("visible");
         current.classList.remove("visible");
+        forecastBtn.disabled = false;
+        degreeBtn.disabled = false;
       }, 2000);
 
       res = await res.json();
@@ -156,8 +160,16 @@ const getHoursAb = (data) => {
 };
 
 forecastBtn.addEventListener("click", () => {
-  current.classList.toggle("visible");
-  forecast.classList.toggle("visible");
+  if (
+    current.classList.contains("visible") &&
+    forecast.classList.contains("visible")
+  ) {
+    current.classList.remove("visible");
+    chartContainer.classList.add("visible");
+  } else {
+    current.classList.toggle("visible");
+    forecast.classList.toggle("visible");
+  }
   (forecastBtn.textContent === "Forecast" &&
     (forecastBtn.textContent = "Current")) ||
     (forecastBtn.textContent = "Forecast");

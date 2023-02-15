@@ -29,6 +29,7 @@ function updateName(location) {
         errorLoading.classList.add("visible");
         current.classList.remove("visible");
       }, 0);
+      tempStatic(cacheDegreeChart[location]);
       updateCurrentWeatherCard(cacheCurrent[location], location);
       resetForecastCard(cacheForecast[location]);
     } else {
