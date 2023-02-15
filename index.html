@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Form -->
+    <div class="left">
+      <div class="select-container">
+        <div class="select-btn">
+          <span class="value">Select Country</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="content">
+          <div class="search">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" placeholder="Search" />
+          </div>
+          <ul class="options"></ul>
+        </div>
+      </div>
+      <button class="save-btn btn" disabled>Save Location</button>
+      <div class="alert">
+        <div class="alert-content">
+          <i class="fa-solid fa-check check"></i>
+          <div class="message">
+            <span class="text text-1">Success</span>
+            <span class="text text-2">This location has been saved</span>
+          </div>
+        </div>
+        <div class="progress"></div>
+      </div>
+    </div>
+
+    <!-- Weather Card -->
+    <div class="right">
+      <div class="card-weather">
+        <div class="loader">
+          <img src="./assets/loading.svg" alt="Map Loading Animation" />
+        </div>
+        <div class="error visible">
+          <div class="err">
+            <img src="./assets//error.svg" alt="" />
+            <h3>Location Not Found</h3>
+          </div>
+        </div>
+        <div class="current visible">
+          <div class="img">
+            <img src="./assets/day.jpg" alt="" class="imgBg" />
+          </div>
+          <div class="detail">
+            <h3 class="location"></h3>
+            <div class="weather-icon">
+              <img
+                src="./assets/weather icons/animated//cloudy-day-1.svg"
+                alt=""
+                class="icon"
+              />
+              <h5 class="condition"></h5>
+            </div>
+            <div class="detail-inside">
+              <h5 class="degree"></h5>
+              <h5 class="date">&#x2022;</h5>
+            </div>
+          </div>
+          <div class="more-detail">
+            <h3 class="weekday"></h3>
+            <div class="description">
+              <div class="left-description">
+                <div>Wind Speed <br /><span class="wind">22 kmph</span></div>
+                <div class="bottom">
+                  Cloud Cover <br /><span class="cloud">22%</span>
+                </div>
+              </div>
+              <div class="middle-description">
+                <div>Pressure <br /><span class="pressure">29.97 in</span></div>
+                <div class="bottom">
+                  Humidity <br /><span class="humidity">94</span>
+                </div>
+              </div>
+              <div class="bottom-description">
+                <div>Precip <br /><span class="precip">0.4 in</span></div>
+                <div class="bottom">uv <br /><span class="uv">5.0</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="forecast visible">
+          <div class="forecast-card">
+            <h3 class="location"></h3>
+            <div class="weather-icon">
+              <img
+                src="./assets/weather icons/animated//cloudy-day-1.svg"
+                alt=""
+                class="icon"
+              />
+              <h5 class="condition"></h5>
+            </div>
+            <h5 class="degree">25&#176;C</h5>
+            <h5 class="forecast-day"></h5>
+            <div class="days">
+              <div class="day-1 day-container day-active">
+                <img
+                  src="http://cdn.weatherapi.com/weather/64x64/day/266.png"
+                  alt=""
+                  class="icon-day"
+                />
+                <div class="degree-day"></div>
+              </div>
+              <div class="day-2 day-container">
+                <img
+                  src="http://cdn.weatherapi.com/weather/64x64/day/266.png"
+                  alt=""
+                  class="icon-day"
+                />
+                <div class="degree-day"></div>
+              </div>
+              <div class="day-3 day-container">
+                <img
+                  src="http://cdn.weatherapi.com/weather/64x64/day/266.png"
+                  alt=""
+                  class="icon-day"
+                />
+                <div class="degree-day"></div>
+              </div>
+              <div class="day-4 day-container">
+                <img
+                  src="http://cdn.weatherapi.com/weather/64x64/day/266.png"
+                  alt=""
+                  class="icon-day"
+                />
+                <div class="degree-day"></div>
+              </div>
+              <div class="day-5 day-container">
+                <img
+                  src="http://cdn.weatherapi.com/weather/64x64/day/266.png"
+                  alt=""
+                  class="icon-day"
+                />
+                <div class="degree-day"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn-forecast">Forecast</button>
+    </div>
+    <script src="./variables.js"></script>
+    <script src="./weatherCurrent.js"></script>
+    <script src="./weatherForecast.js"></script>
+    <script src="./searchCountries.js"></script>
+    <script src="./saveLocation.js"></script>
+    <script src="./getCoordinates.js"></script>
+  </body>
+</html>
