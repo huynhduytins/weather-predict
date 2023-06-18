@@ -1,17 +1,13 @@
-
-## Shinhan Test
-The mid-term competency assessment test of students held by Shinhan and Likieon.
-
 ## Live demo
 [demo](https://huynhduytins.github.io/host-test/)
 ## About App
-Weather App using API from [weatherapi.com](https://www.weatherapi.com/) to display weather's information on any location in the world.
+Weather App using API from [weatherapi.com](https://www.weatherapi.com/) to display weather information on any location in the world.
 
 It built with HTML, CSS and JavaScript.
 
 ## Features
 
-    1. Displaying the basic weather infomation like temperature, wind speed,...
+    1. Displaying the basic weather information like temperature, wind speed,...
 
     2. Forecasting weather in the following days.
 
@@ -19,7 +15,7 @@ It built with HTML, CSS and JavaScript.
 
 ## Caching and Saving Data
     
-    1. The new locations will be save in the location list for the next search.
+    1. The new locations will be saved in the location list for the next search.
 
     2. The locations which have been searched will be cached information, it will display for the next time without refetching data. It will be refreshed every 15 minutes.     
 ## Demo
